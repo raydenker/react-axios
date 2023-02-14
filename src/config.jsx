@@ -1,0 +1,7 @@
+const WEATHER_API_KEY = process.env.REACT_APP_API_WEATHER
+const QUOTE_API_KEY = process.env.REACT_APP_API_QOUTE
+
+export {
+    WEATHER_API_KEY,
+    QUOTE_API_KEY
+}

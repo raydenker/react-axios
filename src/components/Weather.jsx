@@ -1,11 +1,12 @@
 import axios from 'axios'
 import {WeatherContainer,City, Temp, Icon}  from './WeatherStyles'
 import React, { useEffect, useState } from 'react'
+import { WEATHER_API_KEY } from '../config'
 const url =
-  'https://api.weatherapi.com/v1/current.json?key=8bf8cf3d704243ed8ba224040231302&q=dnepropetrovsk&lang=uk'
+  `https://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=dnepropetrovsk&lang=uk`
 
 function Weather() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(null) 
   useEffect(() => {
     axios
       .get(url)

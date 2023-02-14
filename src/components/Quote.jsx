@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
 import {QuoteContainer,QuoteText, Author}  from './QuoteStyles'
+import { QUOTE_API_KEY } from '../config'
 
 function Quote() {
   const quoteRequest = axios.create({
     method: 'POST',
     baseURL: 'https://api.api-ninjas.com/v1/quotes?category=happiness',
-    headers: { 'X-Api-Key': 'qjiy/0OUt5VGPngtA7+YKw==RNpL2rV4WPwVw0WI' },
+    headers: { 'X-Api-Key': QUOTE_API_KEY },
   })
   const [data, setData] = useState(null)
   useEffect(() => {
